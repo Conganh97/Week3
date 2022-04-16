@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sotienbandau=parseInt(prompt("Nhập số tiền ban đầu: "))
+    let sothangchovay=parseInt(prompt('Nhập số tháng cho vay: '))
+    let laihangthang=parseInt(prompt('Nhập lãi hàng tháng'))
+    let tong=sotienbandau
+    for (let i = 1; i <= sothangchovay ; i++) {
+        tong=tong*(1+laihangthang/100)
+    }
+    let lai=tong-sotienbandau
+    document.write(lai)
+</script>
+</body>
+</html>

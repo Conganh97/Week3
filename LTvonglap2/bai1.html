@@ -6,15 +6,15 @@
 </head>
 <body>
 <script>
-    let a=0,b=1,tong=a+b,i=1;
+    let a=0,b=1,tong=a+b,i=0;
     let d=parseInt(prompt("Nhập số Fibonanci cần in"))
-    console.log(a)
-    console.log(b)
-    for (; i < d-1; i++) {
+    document.write(a+ "  ")
+    document.write(b+ "  ")
+    for (; i < d-2; i++) {
         a=b
         b=tong
         tong=a+b
-        console.log(tong)}
+        document.write(tong + "  ")}
 </script>
 
 </body>
