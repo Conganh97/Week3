@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()">Chiến nào</button>
+<script>
+function play() {
+    let a = parseInt(prompt("Nhập số:"))
+    let b = parseInt(prompt("Nhập số:"))
+    let c = Math.floor(Math.random() * (b - a + 1) + a)
+    console.log(c)
+    let d = parseInt(prompt("Nhập số bạn đoán"))
+    for (let i = 0; i < 4; i++) {
+        if (d>c) {d=prompt("Nhập số nhỏ lớn")}
+            else {
+                if (d=c) {alert("Đỉnh đấy bạn")}
+                else {d=prompt("Nhập số lớn hơn")}
+        }
+            if (i=3) {alert("Thua rồi bạn ơi")}
+    }
+        }
+
+</script>
+</body>
+</html>
