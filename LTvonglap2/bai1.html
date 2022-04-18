@@ -6,11 +6,9 @@
 </head>
 <body>
 <script>
-    let a=0,b=1,tong=a+b,i=0;
+    let a=0,b=1,tong=0,i=0;
     let d=parseInt(prompt("Nhập số Fibonanci cần in"))
-    document.write(a+ "  ")
-    document.write(b+ "  ")
-    for (; i < d-2; i++) {
+    for (; i < d; i++) {
         a=b
         b=tong
         tong=a+b
