@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let a=prompt()
+let str=a.toString()
+let b=[str[0]]
+for (let i = 1; i <str.length ; i++) {
+    if ((str[i-1]%2===0) && (str[i]%2===0)) {b.push('-' + str[i])}
+else {b.push(str[i])}
+}
+document.write(b.join(''))
+</script>
+</body>
+</html>
