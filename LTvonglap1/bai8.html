@@ -11,17 +11,17 @@ function play() {
     let a = parseInt(prompt("Nhập số:"))
     let b = parseInt(prompt("Nhập số:"))
     let c = Math.floor(Math.random() * (b - a + 1) + a)
-    console.log(c)
     let d = parseInt(prompt("Nhập số bạn đoán"))
     for (let i = 0; i < 4; i++) {
-        if (d>c) {d=prompt("Nhập số nhỏ lớn")}
-            else {
-                if (d=c) {alert("Đỉnh đấy bạn")}
-                else {d=prompt("Nhập số lớn hơn")}
-        }
-            if (i=3) {alert("Thua rồi bạn ơi")}
-    }
-        }
+        if (i == 3){ alert("Thua rồi bạn ơi, hơi non")
+            break;}
+        if (d > c) {
+            d = parseInt(parseInt("Nhập số bé hơn"))
+        } else if (d = c) {alert('Đỉnh đấy bạn')
+            break}
+        else d = parseInt(prompt("Nhập số lớn hơn"))
+
+    }}
 
 </script>
 </body>
