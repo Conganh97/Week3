@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[],count=0;
+    z=parseInt(prompt('Nhập số phần tử của mảng'))
+    for (let j = 0; j < z ; j++) {
+        a[j]= parseInt(prompt("Nhập phần tử thứ " +j))
+    }
+    for (let i = 0; i < z; i++) {
+        if (a[i]<0) count++
+    }
+document.write('có ' +count+ ' số nguyên âm trong dãy')
+</script>
+
+</body>
+</html>

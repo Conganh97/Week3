@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[], count=0,kq='';
+    i=parseInt(prompt('Nhập số phần tử của mảng'))
+    for (let j = 0; j < i ; j++) {
+        a[j]=prompt("Nhập phần tử thứ " +j)
+    }
+    for (let z = 0; z < i ; z++) {
+        if (a[z] >= 10 ) {
+            count++
+            kq=kq + a[z] + ' ,'
+        }
+    }
+    document.write('có ',count,' số lớn hơn bằng 10, đó là '+kq)
+</script>
+</body>
+</html>

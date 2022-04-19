@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[],tt=0;
+    z=parseInt(prompt('Nhập số phần tử của mảng'))
+    for (let j = 0; j < z ; j++) {
+        a[j]=prompt("Nhập phần tử thứ " +j)
+    }
+    let max = a[0]
+    for (let i = 0; i < z; i++) {
+        if (max < a[i]){
+            max=a[i]
+            tt=i
+        }
+    }
+    document.write('Số lớn nhất trong mảng là ',max, ' ở vị trí '+tt)
+</script>
+</body>
+</html>
