@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1=prompt('Nhập chuỗi A:')
+    a=str1.split('')
+    let str2=prompt('Nhập chuỗi: B')
+    b=str2.split('')
+    let kq=''
+    for (let i = 0; i < a.length; i++) {
+        if (a[i]!==b[i]) {
+            kq='Hai chuỗi không giống nhau'
+            break;
+        } else kq='Hai chuỗi giống nhau'
+    }
+    document.write(kq)
+
+</script>
+</body>
+</html>
