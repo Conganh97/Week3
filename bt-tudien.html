@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Từ điển của Bò</h2>
+<br>
+<p>Nhập từ cần dịch:</p>
+<input id="keyword" type="text"> <button id="translate" onclick="test()">Dịch</button>
+<br>
+<h4 id="display"></h4>
+
+<script>
+    let en=['yes','no','love','macgic','table','pineapple','pen']
+    let vn=['có','không','tình yêu','phép thuật','cái bàn','quả dứa','cái bút']
+    let key=''
+    let kq=''
+    let check = false
+    let i=0
+    function test() {
+        key=document.getElementById('keyword').value
+        console.log(key)
+
+    for (; i < en.length; i++) {
+        if (key.toLowerCase()==en[i] ){
+            check = true
+            break;
+        }}
+        if (check) kq=vn[i]
+        else kq= 'Không tìm thấy từ cần dịch !!!'
+
+
+        document.getElementById('display').innerHTML=kq
+    }
+</script>
+</body>
+</html>
