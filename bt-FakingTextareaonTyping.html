@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<center>
+<h1 align="center">Type anything slowly</h1>
+<form>
+<textarea name="txt" id="word" cols="40" rows="10" onkeydown="changetype();"></textarea>
+</form>
+</center>
+</body>
+<script>
+    let a=[' ','T','Ô','I',' ','L','À',' ','M','Ộ','T',' ','Đ','Ứ','A',' ','N','G','Ố','C','!','!']
+    let b,n="";
+    function changetype(){
+        b=document.getElementById('word').value
+        c=b.length
+        if (c>0){
+            for (let i = 1; i <= c; i++) {
+                n=n+a[i]
+                if (i==22){
+                    document.getElementById('word').value=""
+                    n = ""
+                }
+            }
+        }
+    document.getElementById('word').value=n
+        n=""
+        setTimeout('typeTextarea()',1)
+    }
+
+</script>
+</html>
