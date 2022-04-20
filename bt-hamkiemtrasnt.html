@@ -6,7 +6,6 @@
 </head>
 <body>
 <script>
-    let count=0;
     function ktrasnt(num) {
         let check = true
         for (let i = 2; i < Math.sqrt(num); i++) {
@@ -15,20 +14,17 @@
                 break;}
             } if (check) return num
     }
-    function nhapvain(num1,num2) {
-        for (let i = num1; count < num2; i++) {
-            for (let j = 2; j < num2; j++) {
+    function nhapkhoangvainsnt(num1,num2) {
+            for (let j = num1; j < num2; j++) {
                 ktrasnt(j)
                 if (ktrasnt(j)) {
                     document.write(j + ',')
-                    count++
                 }
             }
-        }
     }
     a=parseInt(prompt('Nhập khoảng cần in snt: '))
     b=parseInt(prompt('Nhập khoảng cần in snt: '))
-    nhapvain(a,b)
+    nhapkhoangvainsnt(a,b)
 </script>
 </body>
 </html>
