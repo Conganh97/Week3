@@ -13,25 +13,23 @@
 <h4 id="display"></h4>
 
 <script>
-    let en=['yes','no','love','macgic','table','pineapple','pen']
+    let en=['yes','no','love','magic','table','pineapple','pen']
     let vn=['có','không','tình yêu','phép thuật','cái bàn','quả dứa','cái bút']
     let key=''
     let kq=''
-    let check = false
-    let i=0
+    let check;
     function test() {
+        let i=0
+        check=false
         key=document.getElementById('keyword').value
-        console.log(key)
-
     for (; i < en.length; i++) {
         if (key.toLowerCase()==en[i] ){
             check = true
             break;
-        }}
+        }
+    }
         if (check) kq=vn[i]
         else kq= 'Không tìm thấy từ cần dịch !!!'
-
-
         document.getElementById('display').innerHTML=kq
     }
 </script>

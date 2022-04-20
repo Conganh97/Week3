@@ -9,19 +9,17 @@
     let a=[],tt=0;
     z=parseInt(prompt('Nhập số phần tử của mảng'))
     for (let j = 0; j < z ; j++) {
-        a[j]= parseInt(prompt("Nhập phần tử thứ " +j))
+        a[j]= parseInt(prompt("Nhập phần tử thứ " + j))
     }
     let v=parseInt(prompt('Nhập V:'))
-    for (let i = 0; i < z; i++) {
-        if (a[i]==v) {
+    for (let i = 0; i < a.length; i++) {
+        if (a[0] == v) a.shift()
+        if (a[i]== v) {
             tt=i
-            for (let j = tt; j < z-1 ; j++) {
-                a[j]= a[j+1]
+            a.splice(i,1)
             }
-            a.pop()
-        }
     }
-    document.write(a.join('+'))
+    document.write(a)
 </script>
 </body>
 </html>
