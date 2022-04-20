@@ -15,9 +15,9 @@
                 break;}
             } if (check) return num
     }
-    function nhapvain(num1) {
+    function nhapvain(num1,num2) {
         for (let i = 2; count < num1; i++) {
-            for (let j = 2; j < num1; j++) {
+            for (let j = num1; j < num2; j++) {
                 ktrasnt(j)
                 if (ktrasnt(j)) {
                     document.write(j + ',')
@@ -27,7 +27,8 @@
         }
     }
     a=parseInt(prompt('Nhập khoảng cần in snt: '))
-    nhapvain(a)
+    b=parseInt(prompt('Nhập khoảng cần in snt: '))
+    nhapvain(a,b)
 </script>
 </body>
 </html>
