@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a=[6,2,7,8,1,8,8]
+  let max2=0
+  a.sort(function (a,b) {return a-b})
+  document.write(a +'<br>')
+  for (let i = a.length-1; i >= 0 ; i--) {
+    if (a[i]==a[i-1]) continue
+      else {max2=a[i-1]
+      break}
+  }
+document.write(max2)
+</script>
+</body>
+</html>
