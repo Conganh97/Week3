@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input id="value"> <button onclick="tangdan()">Tăng</button>
+<p id="display"></p>
+<script>
+  function tangdan(){
+    let a=document.getElementById('value').value
+    a=parseInt(a)
+    a=a+1
+    document.getElementById('display').innerHTML=a
+  }
+
+</script>
+</body>
+</html>

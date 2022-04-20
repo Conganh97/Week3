@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Từ điển của ngôi sao</h2>
+<br>
+<p>Nhập tên ngôi sao:</p>
+<input id="keyword" type="text"> <button id="translate" onclick="test()">Dịch</button>
+<br>
+<h4>Thuộc chòm sao: <span id="display" ></span> </h4>
+
+<script>
+    let ns=['oolaris', 'aldebaran', 'deneb', 'vega', 'altair', 'dubhe' , 'regulus']
+    let cs=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' ,'Leo']
+    let key=''
+    let kq=''
+    let check;
+    function test() {
+        let i=0
+        check=false
+        key=document.getElementById('keyword').value
+        for (; i < ns.length; i++) {
+            if (key.toLowerCase()==ns[i] ){
+                check = true
+                break;
+            }
+        }
+        if (check) kq=cs[i]
+        else kq= 'Không tìm thấy chòm sao !!!'
+        document.getElementById('display').innerHTML=kq
+    }
+</script>
+</body>
+</html>
+</body>
+</html>
