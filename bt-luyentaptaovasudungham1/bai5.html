@@ -15,16 +15,21 @@
 <h2>Từ điển của ngôi sao</h2>
 <br>
 <p>Nhập tên ngôi sao:</p>
-<input id="keyword" type="text"> <button id="translate" onclick="test()">Dịch</button>
+<input id="keyword" type="text" onclick="nhap() "> <button id="translate" onclick="test()">Dịch</button>
 <br>
 <h4>Thuộc chòm sao: <span id="display" ></span> </h4>
 
 <script>
-    let ns=['oolaris', 'aldebaran', 'deneb', 'vega', 'altair', 'dubhe' , 'regulus']
+    let ns=['polaris', 'aldebaran', 'deneb', 'vega', 'altair', 'dubhe' , 'regulus']
     let cs=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' ,'Leo']
     let key=''
     let kq=''
     let check;
+    function nhap(){
+        let a =prompt("Nhập tên ngôi sao:")
+        document.getElementById('keyword').value=a
+    }
+
     function test() {
         let i=0
         check=false

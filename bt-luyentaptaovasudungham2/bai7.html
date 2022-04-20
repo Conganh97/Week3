@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        function change(a,b) {
+            let tg = 0
+            tg = a
+            a = b
+            b = tg
+            return a,b
+        }
+        let a = parseInt(prompt("Nhập số a"))
+        let b = parseInt(prompt("Nhập số b"))
+        alert("a = " +a+ " b = " +b)
+        change(a,b)
+        alert("a = " +a+ " b = " +b)
+
+</script>
+</body>
+</html>

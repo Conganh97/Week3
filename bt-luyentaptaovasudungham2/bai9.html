@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function find(arr,v) {
+    let count=0
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] == v) count++
+      }
+    if (count==0) return -1
+    else return count
+    }
+  let a=[];
+  z=parseInt(prompt('Nhập số phần tử của mảng'))
+  for (let j = 0; j < z ; j++) {
+    a[j]= parseInt(prompt("Nhập phần tử thứ " + j))
+  }
+  let v=parseInt(prompt('Nhập V:'))
+  d=find(a,v)
+  alert(d)
+</script>
+</body>
+</html>
