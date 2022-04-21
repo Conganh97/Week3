@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemtra(str) {
+        let check = true
+        let a = str.split('')
+        if (a[0] !== a[a.length - 1]) {
+            alert(("Đây không phải chuỗi đối xứng"))
+        } else {
+            for (let i = 1; i < a.length / 2; i++) {
+                if (a[i] !== a[(a.length - 1) - i]) {
+                    check = false
+                    break
+                }
+            }
+            if (check) return alert('Đây là chuỗi đối xứng')
+            else return  alert('Đây không phải chuỗi đối xứng')
+        }
+    }
+        str=prompt("Nhập chuỗi bất kì:")
+    kiemtra(str)
+</script>
+</body>
+</html>
