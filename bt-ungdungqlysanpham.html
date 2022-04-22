@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<br>
+<input id="product" type="text" placeholder="New Product" ><button id="New" onclick="add()">Add</button>
+<br>
+<h3>Display All Product</h3>
+<table width="600">
+<tr>
+    <td>
+        <h4>Product Name</h4>
+    </td>
+    <td><h4 align="right">số lượng</h4></td>
+
+</tr>
+</table>
+<p id="display"></p>
+</body>
+<script>
+    let a = ['Sony Xperia','SamSung Galaxy','Nokia 6',
+            'Xiami Redmi Note 4','Apple Iphone 6S','Xiaomi 5S Plus',
+            'Apple Iphone 8 Plus','Fujitsu F-04E','Oppo A71']
+    let display,i,j;
+    display= "<table border='0' width='600px'>";
+    for (let i = 0; i < a.length ; i++) {
+        display = display + `<tr><td><h5>${a[i]}</h5></td>
+            <td><button id='Edit' onClick='sua()'>Edit</button></td>
+            <td><button id= 'Delete' onClick='xoa()'>Delete</button></td></tr>`
+    }
+document.getElementById('display').innerHTML=display + '</table>'
+
+</script>
+</html>
