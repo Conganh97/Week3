@@ -4,35 +4,86 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    tr:nth-child(even){background: bisque}
+    button{
+        background: burlywood;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    h1 {
+        color: orange;
+    }
+</style>
 <body>
-<h3>Add New Product</h3>
+<h1> Manager Product</h1>
 <br>
-<input id="product" type="text" placeholder="New Product" ><button id="New" onclick="add()">Add</button>
+<h3>Add New Product</h3>
+<input id="product" type="text" placeholder="New Product" >
+<input id="img" type="text" placeholder="Image">
+<button id="New" onclick="add()">Add</button>
+<button id="edit" onclick="saveedit()">Save Edit</button>
 <br>
 <h3>Display All Product</h3>
-<table width="600">
+<table width="1000">
 <tr>
     <td>
         <h4>Product Name</h4>
     </td>
-    <td><h4 align="right">số lượng</h4></td>
+    <td><h4 id="num" align="right">số lượng</h4></td>
 
 </tr>
 </table>
 <p id="display"></p>
 </body>
 <script>
-    let a = ['Sony Xperia','SamSung Galaxy','Nokia 6',
-            'Xiami Redmi Note 4','Apple Iphone 6S','Xiaomi 5S Plus',
-            'Apple Iphone 8 Plus','Fujitsu F-04E','Oppo A71']
-    let display,i,j;
-    display= "<table border='0' width='600px'>";
-    for (let i = 0; i < a.length ; i++) {
-        display = display + `<tr><td><h5>${a[i]}</h5></td>
-            <td><button id='Edit' onClick='sua()'>Edit</button></td>
-            <td><button id= 'Delete' onClick='xoa()'>Delete</button></td></tr>`
+    let a = [['Sony Xperia','https://product.hstatic.net/1000370129/product/a53458a9dec1eb9adf6f465_grande_01007b36222a4be2becada786ec315b2_master_86855312c7dc4ae98a4960b4a69432a9_master.png'],
+        ['SamSung Galaxy','https://image.cellphones.com.vn/358x/media/catalog/product/s/m/sm-g990_s21fe_backfront_lv_7.png'],
+        ['Iphone 13','https://product.hstatic.net/1000370129/product/iphone-13-den_1813106527b54a038016a1325ce7d8f0_master.png']
+            ]
+    function load() {
+        let display;
+        display = "<table border='0' width='1000px'>";
+        for (let i = 0; i < a.length; i++) {
+            display += `<tr><td><h5>${a[i][0]}</h5></td>
+            <td><img src="${a[i][1]}" alt="K hiển thị"></td>
+            <td><button id='Edit' onclick="sua(${i})">Edit</button></td>
+            <td><button id= 'Delete' onclick="xoa(${i})">Delete</button></td></tr>`
+        }
+        document.getElementById('display').innerHTML = display + '</table>'
+        num()
     }
-document.getElementById('display').innerHTML=display + '</table>'
+    function add(){
+        let name=document.getElementById('product').value
+        let anh = document.getElementById('img').value
+        a.push([name,anh])
+        load()
+    }
+    function xoa(value){
+        a.splice(value,1)
+        load()
+    }
+    let indexEdit = -1;
+    function sua(index) {
+        document.getElementById('product').value = a[index][0];
+        document.getElementById('img').value = a[index][1]
+        indexEdit = index;
+    }
+    function saveedit() {
+        let name = document.getElementById('product').value;
+        let anh= document.getElementById('img').value
+        a[indexEdit][0] = name;
+        a[indexEdit][1] = anh
+        load();
+        indexEdit = -1;
+    }
+
+    function num(){
+        let b=document.getElementById('num').innerText= a.length+ ' Product'
+    }
+    load()
 
 </script>
 </html>
